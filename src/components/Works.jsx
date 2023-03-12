@@ -4,13 +4,7 @@ import Development from "./Development";
 import ProductDesign from "./ProductDesign";
 import WebDesign from "./WebDesign";
 
-const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Product Design",
-  "Social Media",
-];
+const data = ["AAA", "BBB", "CCC"];
 
 const Section = styled.div`
   height: 100vh;
@@ -99,23 +93,8 @@ const Works = () => {
   return (
     <Section>
       <Container>
-        <Left>
-          <List>
-            {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
-                {item}
-              </ListItem>
-            ))}
-          </List>
-        </Left>
         <Right>
-          {work === "Web Design" ? (
-            <WebDesign />
-          ) : work === "Development" ? (
-            <Development />
-          ) : (
-            <ProductDesign />
-          )}
+          <Development />
         </Right>
       </Container>
     </Section>

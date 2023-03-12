@@ -12,7 +12,7 @@ const Container = styled.div`
   scrollbar-width: none;
   color: white;
   background: url("./img/bg.jpeg");
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 `;
@@ -20,10 +20,10 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <Hero />
+      {/* <Hero /> */}
       <Who />
       <Works />
-      <Contact />
+      {/* <Contact /> */}
     </Container>
   );
 }

@@ -81,12 +81,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_id",
-        "template_id",
-        ref.current,
-        "public_key"
-      )
+      .sendForm("service_id", "template_id", ref.current, "public_key")
       .then(
         (result) => {
           console.log(result.text);
@@ -101,24 +96,7 @@ const Contact = () => {
   return (
     <Section>
       <Container>
-        <Left>
-          <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
-            <Input placeholder="Name" name="name" />
-            <Input placeholder="Email" name="email" />
-            <TextArea
-              placeholder="Write your message"
-              name="message"
-              rows={10}
-            />
-            <Button type="submit">Send</Button>
-            {success &&
-              "Your message has been sent. We'll get back to you soon :)"}
-          </Form>
-        </Left>
-        <Right>
-          <Map />
-        </Right>
+        <Right>{/* <Map /> */}</Right>
       </Container>
     </Section>
   );
